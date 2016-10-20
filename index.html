@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <title>Celebrity Matchmaker!</title>
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <div class="row">
+          <div class="col-md-4">
+            <h3>Interested in:</h3>
+            <div class="radio">
+              <label>
+                <input type="radio" name="gender" value="men">
+                Men
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="gender" value="women">
+                Women
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="gender" value="both">
+                Both
+              </label>
+            </div>
+          </div><!--col-->
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="age"><h3>Your ideal match's approximate age:</h3></label>
+              <input id="age" class="form-control" type="text">
+            </div>
+          </div><!--col-->
+          <div class="col-md-4">
+            <h3>Choose your favorite thing from this list:</h3>
+            <select class="form-control">
+              <option></option>
+              <option>Music</option>
+              <option>Literature</option>
+              <option>Movies</option>
+              <option>Travel</option>
+            </select>
+          </div><!--col-->
+        </div><!--row-->
+      </form>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="julian">
+            <h2>Your ideal celebrity match is Julian Casablancas!!</h2>
+            <img src="img/julian.jpg" alt="Julian Casablancas">
+          </div>
+          <div class="margot">
+            <h2>Your ideal celebrity match is Margot Robbie!!</h2>
+            <img src="img/margot.jpg" alt="Margot Robbie">
+          </div>
+          <div class="josh">
+            <h2>Your ideal celebrity match is Josh Hutcherson!!</h2>
+            <img src="img/josh.jpg" alt="Josh Hutcherson">
+          </div>
+          <div class="salma">
+            <h2>Your ideal celebrity match is Salma Hayek!!</h2>
+            <img src="img/salma.jpg" alt="Salma Hayek">
+          </div>
+        </div><!--col-->
+      </div><!--row-->
+    </div><!--container-->
+  </body>
+</html>
