@@ -14,53 +14,58 @@ $(document).ready(function(){
     $(".salma").hide();
     $(".margot").hide();
 
-    if (gender === "both" && age >= 40) {
-      if (interest === "Music") {
-        result = "julian";
+    if (gender && age && interest) {
+      if (gender === "both" && age >= 40) {
+        if (interest === "Music") {
+          result = "julian";
+        }
+        else {
+          result = "salma";
+        }
       }
-      else {
-        result = "salma";
+      else if (gender === "both" && age < 40) {
+        if (interest === "Movies") {
+          result = "josh";
+        }
+        else {
+          result = "margot";
+        }
       }
-    }
-    else if (gender === "both" && age < 40) {
-      if (interest === "Movies") {
-        result = "josh";
+      else if (gender === "men") {
+        if (age >= 40) {
+          result = "julian";
+        }
+        else {
+          result = "josh";
+        }
       }
-      else {
-        result = "margot";
+      else if (gender === "women") {
+        if (age >= 40) {
+          result = "salma";
+        }
+        else {
+          result = "margot";
+        }
       }
-    }
-    else if (gender === "men") {
-      if (age >= 40) {
-        result = "julian";
-      }
-      else {
-        result = "josh";
-      }
-    }
-    else if (gender === "women") {
-      if (age >= 40) {
-        result = "salma";
-      }
-      else {
-        result = "margot";
-      }
-    }
 
-    if (result === "julian") {
-      $(".julian").show();
-    }
-    else if (result === "josh") {
-      $(".josh").show();
-    }
-    else if (result === "margot") {
-      $(".margot").show();
-    }
-    else if (result === "salma") {
-      $(".salma").show();
+      if (result === "julian") {
+        $(".julian").show();
+      }
+      else if (result === "josh") {
+        $(".josh").show();
+      }
+      else if (result === "margot") {
+        $(".margot").show();
+      }
+      else if (result === "salma") {
+        $(".salma").show();
+      }
+      else {
+        alert("Something went wrong");
+      }
     }
     else {
-      alert("Something went wrong");
+      alert("Please fill in all fields.");
     }
   });
 });
